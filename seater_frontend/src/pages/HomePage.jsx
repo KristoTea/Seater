@@ -4,6 +4,7 @@ import Slide from '@mui/material/Slide';
 
 import PageWrap from "./PageWrap";
 import Building from "../components/Building";
+import CardContent from '@mui/material/CardContent';
 
 function HomePage() {
     return (
@@ -28,11 +29,21 @@ function HomePage() {
                         <div style={{
                             fontSize: 30,
                             fontWeight: 500,
-                            display: "flex",
                             color: "white",
                             justifyContent: "center"
                         }}>
                             Information
+                            <div style = {{
+                                marginRight: 10,
+                                fontWeight: 500,
+                                color:"black",
+                                fontSize: 15,
+                                display: "flex",
+                                flexDirection: "row"
+                            }}>
+                                Informacija o broju soba
+                                Informacija o broju slobodnih soba
+                            </div>
                         </div>
                     </div>
                 </Slide>
