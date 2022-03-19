@@ -15,7 +15,7 @@ function PageWrap({children}) {
                     background: "#0A534B" //#278878
                 }}>
                     <Toolbar>
-                        <Typography variant="h4" style={{fontWeight: 700}} component="div" sx={{ flexGrow: 1 }}>
+                        <Typography variant="h4" style={{fontWeight: 800, fontFamily: "Poppins"}} component="div" sx={{ flexGrow: 1 }}>
                             Seater
                         </Typography>
                         <Button color="inherit">Log in</Button>
