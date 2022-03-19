@@ -6,6 +6,8 @@ import com.example.seater_backend.rest.user.dto.LoginUserDTO;
 import com.example.seater_backend.rest.user.dto.RegisterUserDTO;
 import com.example.seater_backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -55,6 +57,13 @@ public class UserServiceJpa implements UserService {
         return pwdEncoder.matches(user.getPassword(),
                 userRepo.findByUsername(user.getUsername()).orElseThrow(
                         () -> new UsernameNotFoundException("No user with username: "+user.getUsername())).getPassword());
+    }
+
+    @Override
+    @Modifying
+    @Query(("DELETE FROM seater_user WHERE user.id = :userId "))
+    public boolean deleteUser(Long userId) {
+        return true;
     }
 
 }
