@@ -1,8 +1,10 @@
 import React from "react";
+import {useHistory} from "react-router-dom";
 
 import {AppBar, Box, Button, IconButton, Toolbar, Typography} from "@mui/material";
 
-function PageWrap({children}) {
+function PageWrap({children, show}) {
+const history = useHistory();
     return (
         <div style={{
             width: "100%",
@@ -18,7 +20,7 @@ function PageWrap({children}) {
                         <Typography variant="h4" style={{fontWeight: 700}} component="div" sx={{ flexGrow: 1 }}>
                             Seater
                         </Typography>
-                        <Button color="inherit">Log in</Button>
+                        {show == false || show == undefined && <Button color="inherit" onClick={() => history.push("/login")}>Log in</Button>}
                     </Toolbar>
                 </AppBar>
             </Box>
