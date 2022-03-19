@@ -10,11 +10,11 @@ const history = useHistory();
             width: "100%",
             height: "100vh",
             overflow: "hidden",
-            background: "#FFFFFF"
+            background: "linear-gradient(#FFFFFF, #F3F3F3FF)"
         }}>
             <Box sx={{ flexGrow: 1 }}>
                 <AppBar position="static" style={{
-                    background: "rgb(213,55,55)"
+                    background: "#0A534B" //#278878
                 }}>
                     <Toolbar>
                         <Typography variant="h4" style={{fontWeight: 700}} component="div" sx={{ flexGrow: 1 }}>
