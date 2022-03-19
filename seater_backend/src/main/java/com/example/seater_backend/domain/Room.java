@@ -21,8 +21,16 @@ public class Room {
     @OneToMany(cascade = CascadeType.ALL)
     private List<Workstation> workspaces;
 
-    @ElementCollection
-    private List<Date> reservations;
+    public List<Reservation> getReservations() {
+        return reservations;
+    }
+
+    public void setReservations(List<Reservation> reservations) {
+        this.reservations = reservations;
+    }
+
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Reservation> reservations;
 
     public Long getId() {
         return id;
@@ -64,11 +72,4 @@ public class Room {
         this.workspaces = workspaces;
     }
 
-    public List<Date> getReservations() {
-        return reservations;
-    }
-
-    public void setReservations(List<Date> reservations) {
-        this.reservations = reservations;
-    }
 }
