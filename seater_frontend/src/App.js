@@ -1,7 +1,10 @@
+import React from "react";
+import HomePage from "./pages/HomePage";
+
 function App() {
   return (
     <div className="App">
-      <h1>Seater app</h1>
+      <HomePage />
     </div>
   );
 }
