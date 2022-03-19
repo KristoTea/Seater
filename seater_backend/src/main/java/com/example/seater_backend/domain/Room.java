@@ -14,6 +14,8 @@ public class Room {
 
     private boolean isAssigned;
 
+    private boolean isAssignedToTeam;
+
     @OneToOne
     private User roomAdministrator;
 
@@ -69,6 +71,14 @@ public class Room {
 
     public void setWorkstations(List<Workstation> workspaces) {
         this.workstations = workspaces;
+    }
+
+    public boolean isAssignedToTeam() {
+        return isAssignedToTeam;
+    }
+
+    public void setAssignedToTeam(boolean assignedToTeam) {
+        isAssignedToTeam = assignedToTeam;
     }
 
 }

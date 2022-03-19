@@ -10,5 +10,9 @@ public interface SeatingService {
 
     List<Room> getRooms(Long floorId);
     List<Floor> getFloors();
+    boolean assignRoomToUser(Long roomId, Long userId);
+    boolean assignRoomToTeam(Long roomId, Long teamId);
+    boolean assignWorkstationToUser(Long workstationId, Long userId);
+    boolean changeRoomStatus(Long roomId);
 
 }
