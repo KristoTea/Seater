@@ -29,6 +29,21 @@ public class SeatingController {
         return seatingService.getFloors();
     }
 
+    @PostMapping("/room/assign/user/{roomId}/{userId}")
+    public boolean assignRoomToUser(@PathVariable Long roomId, @PathVariable Long userId) {
+        return seatingService.assignRoomToUser(roomId, userId);
+    };
+
+    @PostMapping("/room/assign/team/{roomId}/{teamId}")
+    public boolean assignRoomToTeam(@PathVariable Long roomId, @PathVariable Long teamId) {
+        return seatingService.assignRoomToTeam(roomId, teamId);
+    };
+
+    @PostMapping("/workstation/assign/user/{workstationId}/{userId}")
+    public boolean assignWorkstationToUser(@PathVariable Long workstationId, @PathVariable Long userId) {
+        return seatingService.assignWorkstationToUser(workstationId, userId);
+    }
+
 
 
 }
