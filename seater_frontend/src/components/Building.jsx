@@ -1,5 +1,7 @@
 import React from "react";
 
+import Tooltip from '@mui/material/Tooltip';
+
 import BuildingFloor from "./BuildingFloor";
 import buildingImg from "../assets/building.png"
 
@@ -13,9 +15,11 @@ export default function Building({floors}) {
         })
     })
     return (
+        <>
         <div style={{
             height: "85%",
             width: "30%",
+            marginBottom: "10vh"
         }}>
             <div style={{
                     height: "100%",
@@ -67,8 +71,8 @@ export default function Building({floors}) {
                     style={{
                         position: "absolute",
                         top: 0,
-                        left: 250,
-                        width: 120,
+                        left: 320,
+                        width: 80,
                         height: 100,
                         background: "#FFFFFF"
                     }}
@@ -107,14 +111,6 @@ export default function Building({floors}) {
                 </div>
             </div>
         </div>
-        // <div style={{
-        //     height: "85%",
-        //     width: "30%",
-        // }}>
-        //     <img src={buildingImg}  alt="building"/>
-        //     {floors.map(i => (
-        //         <BuildingFloor i={i} length={floors.length} />
-        //     ))}
-        // </div>
+        </>
     )
 }

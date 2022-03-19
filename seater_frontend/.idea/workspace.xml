@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5eb046d-3550-4d74-b605-24619c6efd76" name="Changes" comment="add building on homepage" />
+    <list default="true" id="c5eb046d-3550-4d74-b605-24619c6efd76" name="Changes" comment="majko moja">
+      <change afterPath="$PROJECT_DIR$/src/components/FloorRoom.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Building.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Building.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BuildingFloor.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BuildingFloor.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/FloorPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/FloorPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/PageWrap.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PageWrap.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="develop" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitRewordedCommitMessages">
+    <option name="commitMessagesMapping">
+      <RewordedCommitMessageMapping>
+        <option name="originalMessage" value="add building on homepage" />
+        <option name="rewordedMessage" value="aaaaaaaaaaaaaaaaa&#10;&#10;&#10;jebenti vise&#10;&#10;&#10;add building on homepage" />
+      </RewordedCommitMessageMapping>
+    </option>
+    <option name="currentCommit" value="1" />
+    <option name="onto" value="9eaa614d939631f3ea433ddbcbb588fdeada29ca" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -52,6 +75,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -64,6 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1647689350117</updated>
       <workItem from="1647689351388" duration="7487000" />
+      <workItem from="1647696915236" duration="7162000" />
     </task>
     <task id="LOCAL-00001" summary="add building on homepage">
       <created>1647696722316</created>
@@ -72,7 +97,28 @@
       <option name="project" value="LOCAL" />
       <updated>1647696722316</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="jebenti vise">
+      <created>1647697011787</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1647697011787</updated>
+    </task>
+    <task id="LOCAL-00003" summary="aaaaaaaaaaaaaaaaa">
+      <created>1647697050004</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1647697050004</updated>
+    </task>
+    <task id="LOCAL-00004" summary="majko moja">
+      <created>1647697159941</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1647697159941</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -88,9 +134,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add building on homepage" />
-    <option name="LAST_COMMIT_MESSAGE" value="add building on homepage" />
+    <MESSAGE value="jebenti vise" />
+    <MESSAGE value="aaaaaaaaaaaaaaaaa" />
+    <MESSAGE value="majko moja" />
+    <option name="LAST_COMMIT_MESSAGE" value="majko moja" />
   </component>
 </project>
