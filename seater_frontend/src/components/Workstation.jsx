@@ -3,9 +3,8 @@ import React from 'react'
 import WorkstationChip from '../components/WorkstationChip'
 
 export default function Workstation({equipment}) {
-    console.log(equipment)
-    const e = equipment.split(" ")
-    e.map((eq) => console.log(eq))
+    // console.log(equipment)
+    const e = equipment.split(", ");
     return (
         <div style={{
             width: "45%",
@@ -27,8 +26,7 @@ export default function Workstation({equipment}) {
                 borderRadius: "20px",
                 border: "5px solid #414141"
             }} />
-            {/*{e.map((eq) => (<WorkstationChip type={eq}/>))}*/}
-            <WorkstationChip type="Monitor" />
+            {e.map((eq) => (<WorkstationChip type={eq}/>))}
         </div>
     )
 }

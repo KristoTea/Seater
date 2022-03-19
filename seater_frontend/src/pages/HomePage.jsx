@@ -9,15 +9,15 @@ import CardContent from '@mui/material/CardContent';
 import authHeader from "../util/auth"
 
 function HomePage() {
-    React.useEffect(() => {
-        fetch("http://localhost:8080/seating/floors", {
-            method: "GET",
-            headers: {
-                Authorization: authHeader(),
-                "Content-Type": "application/json",
-            },
-        }).then((r) => console.log(r.json()))
-    }, [])
+    // React.useEffect(() => {
+    //     fetch("http://localhost:8080/seating/floors", {
+    //         method: "GET",
+    //         headers: {
+    //             Authorization: authHeader(),
+    //             "Content-Type": "application/json",
+    //         },
+    //     }).then((r) => console.log(r.json()))
+    // }, [])
     return (
         <PageWrap>
             <div style={{
