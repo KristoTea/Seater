@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5eb046d-3550-4d74-b605-24619c6efd76" name="Changes" comment="WIP">
-      <change afterPath="$PROJECT_DIR$/src/util/auth.js" afterDir="false" />
+    <list default="true" id="c5eb046d-3550-4d74-b605-24619c6efd76" name="Changes" comment="majko moja">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Building.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Building.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BuildingFloor.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BuildingFloor.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chair.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chair.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/FloorRoom.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FloorRoom.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Workstation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Workstation.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/FloorPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/FloorPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/HomePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/PageWrap.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PageWrap.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/RoomPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RoomPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +56,6 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -80,7 +75,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.start" />
@@ -150,9 +144,5 @@
     <MESSAGE value="aaaaaaaaaaaaaaaaa" />
     <MESSAGE value="majko moja" />
     <option name="LAST_COMMIT_MESSAGE" value="majko moja" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>
