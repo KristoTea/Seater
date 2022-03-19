@@ -1,7 +1,6 @@
 package com.example.seater_backend.domain;
 
 import javax.persistence.*;
-import java.util.Date;
 import java.util.List;
 
 @Entity(name="room")
@@ -19,7 +18,7 @@ public class Room {
     private User roomAdministrator;
 
     @OneToMany(cascade = CascadeType.ALL)
-    private List<Workstation> workspaces;
+    private List<Workstation> workstations;
 
     public List<Reservation> getReservations() {
         return reservations;
@@ -64,12 +63,12 @@ public class Room {
         this.roomAdministrator = roomAdministrator;
     }
 
-    public List<Workstation> getWorkspaces() {
-        return workspaces;
+    public List<Workstation> getWorkstations() {
+        return workstations;
     }
 
-    public void setWorkspaces(List<Workstation> workspaces) {
-        this.workspaces = workspaces;
+    public void setWorkstations(List<Workstation> workspaces) {
+        this.workstations = workspaces;
     }
 
 }

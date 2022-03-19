@@ -1,4 +1,4 @@
-package com.example.seater_backend.rest.user;
+package com.example.seater_backend.rest.seating;
 
 import com.example.seater_backend.domain.Floor;
 import com.example.seater_backend.domain.Room;
@@ -28,5 +28,7 @@ public class SeatingController {
     public List<Floor> getFloors() {
         return seatingService.getFloors();
     }
+
+
 
 }
