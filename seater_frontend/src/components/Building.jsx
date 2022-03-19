@@ -8,11 +8,6 @@ import buildingImg from "../assets/building.png"
 export default function Building({floors}) {
     React.useEffect(() => {
         console.log(floors)
-        floors.map(i => {
-            console.log(i)
-            console.log(floors.length)
-            console.log(1/floors.length)
-        })
     })
     return (
         <>
@@ -34,7 +29,7 @@ export default function Building({floors}) {
                         left: 0,
                         width: 10,
                         height: 100,
-                        background: "#FFFFFF"
+                        background: "rgb(33, 33, 33)"
                     }}
                 />
                 <div
@@ -44,7 +39,7 @@ export default function Building({floors}) {
                         left: 0,
                         width: 30,
                         height: 20,
-                        background: "#FFFFFF"
+                        background: "rgb(33, 33, 33)"
                     }}
                 />
                 <div
@@ -54,7 +49,7 @@ export default function Building({floors}) {
                         left: 100,
                         width: 80,
                         height: 20,
-                        background: "#FFFFFF"
+                        background: "rgb(33, 33, 33)"
                     }}
                 />
                 <div
@@ -64,7 +59,7 @@ export default function Building({floors}) {
                         left: 150,
                         width: 200,
                         height: 5,
-                        background: "#FFFFFF"
+                        background: "rgb(33, 33, 33)"
                     }}
                 />
                 <div
@@ -74,7 +69,7 @@ export default function Building({floors}) {
                         left: 320,
                         width: 80,
                         height: 100,
-                        background: "#FFFFFF"
+                        background: "rgb(33, 33, 33)"
                     }}
                 />
                 <div
@@ -84,7 +79,7 @@ export default function Building({floors}) {
                         right: 0,
                         width: 100,
                         height: 70,
-                        background: "#FFFFFF"
+                        background: "rgb(33, 33, 33)"
                     }}
                 />
                 <div
@@ -94,7 +89,7 @@ export default function Building({floors}) {
                         right: 0,
                         width: 20,
                         height: 100,
-                        background: "#FFFFFF"
+                        background: "rgb(33, 33, 33)"
                     }}
                 />
                 <div style={{

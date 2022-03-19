@@ -19,7 +19,7 @@ export default function BuildingFloor({i, length}) {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                background: hovered ? "#98bdb8" : "#d2d2d2",
+                background: hovered ? "#627c79" : "#888888",
                 cursor: hovered && "pointer"
             }}
             onClick={() => history.push("/floor")}

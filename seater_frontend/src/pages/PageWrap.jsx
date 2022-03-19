@@ -10,7 +10,7 @@ const history = useHistory();
             width: "100%",
             height: "100vh",
             overflow: "hidden",
-            background: "linear-gradient(#FFFFFF, #F3F3F3FF)"
+            background: "rgb(33, 33, 33)"
         }}>
             <Box sx={{ flexGrow: 1 }}>
                 <AppBar position="static" style={{

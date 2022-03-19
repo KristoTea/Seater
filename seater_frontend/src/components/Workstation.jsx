@@ -4,7 +4,7 @@ export default function Workstation({size}) {
     return (
         <div style={{
             width: {size},
-            height: {size*0.7},
+            // height: {size*0.7},
             background: "#98bdb8",
             padding: "10px",
             borderRadius: 5,
