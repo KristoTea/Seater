@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5eb046d-3550-4d74-b605-24619c6efd76" name="Changes" comment="majko moja">
+    <list default="true" id="c5eb046d-3550-4d74-b605-24619c6efd76" name="Changes" comment="WIP">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chair.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chair.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FloorRoom.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FloorRoom.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Workstation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Workstation.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/PageWrap.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PageWrap.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/LoginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LoginPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/RoomPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RoomPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,12 +49,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../MyVinylCollection/frontend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Korisnik\IdeaProjects\Hackathon2022\seater_frontend\public" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Korisnik\IdeaProjects\Hackathon2022\seater_frontend\src\assets" />
     </key>
@@ -75,6 +75,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.start" />
@@ -120,7 +121,21 @@
       <option name="project" value="LOCAL" />
       <updated>1647697159941</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add rooms page">
+      <created>1647720231418</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1647720231418</updated>
+    </task>
+    <task id="LOCAL-00006" summary="WIP">
+      <created>1647724460648</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1647724460648</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +158,12 @@
     <MESSAGE value="jebenti vise" />
     <MESSAGE value="aaaaaaaaaaaaaaaaa" />
     <MESSAGE value="majko moja" />
-    <option name="LAST_COMMIT_MESSAGE" value="majko moja" />
+    <MESSAGE value="add rooms page" />
+    <MESSAGE value="WIP" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

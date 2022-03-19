@@ -68,6 +68,7 @@ export default function FloorPage() {
                 width: "100%",
                 position: "relative"
             }}>
+
                 <div
                 style={{
                     position: "absolute",
