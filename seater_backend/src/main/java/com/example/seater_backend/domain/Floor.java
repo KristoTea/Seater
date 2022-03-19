@@ -13,7 +13,7 @@ public class Floor {
     private String name;
 
     @OneToMany(cascade = CascadeType.ALL)
-    private List<User> rooms;
+    private List<Room> rooms;
 
     public Long getId() {
         return id;
@@ -27,16 +27,16 @@ public class Floor {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public List<User> getRooms() {
+    public List<Room> getRooms() {
         return rooms;
     }
 
-    public void setRooms(List<User> rooms) {
+    public void setRooms(List<Room> rooms) {
         this.rooms = rooms;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
 }
