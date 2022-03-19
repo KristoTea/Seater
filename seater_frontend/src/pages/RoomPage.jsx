@@ -5,12 +5,11 @@ import Workstation from "../components/Workstation"
 
 export default function RoomPage() {
     return (
-
         <PageWrap>
             <div style={{
                 display: "flex",
                 height: "100%",
-                flexGrow: 1
+                flexGrow: 1,
             }}>
                 <div style={{
                     margin: "auto",
@@ -19,9 +18,17 @@ export default function RoomPage() {
                     maxHeight: "70%",
                     overflow: "auto",
                     padding: "20px",
-                    border: "1px solid black"
+                    border: "1px solid black",
+                    background: "#414141",
+                    display: "flex",
+                    flexWrap: "wrap",
+                    justifyContent: "space-evenly"
                 }}>
-                    <Workstation size={100}/>
+                    <Workstation equipment={"Monitor, Keyboard, Mouse"}/>
+                    <Workstation equipment={"Monitor, Mouse"}/>
+                    <Workstation equipment={"Monitor, Keyboard, Mouse, Laptop, Laptop"}/>
+                    <Workstation equipment={"Keyboard, Mouse"}/>
+                    <Workstation equipment={"Monitor, Keyboard, Mouse"}/>
                 </div>
             </div>
         </PageWrap>
