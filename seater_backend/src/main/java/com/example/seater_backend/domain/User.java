@@ -1,9 +1,12 @@
 package com.example.seater_backend.domain;
 
+import com.example.seater_backend.rest.user.dto.RegisterUserDTO;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.util.List;
 
 @Entity(name="seater_user")
 public class User {
@@ -22,6 +25,16 @@ public class User {
     private String password;
 
     private String position;
+
+    public User() {}
+
+    public User(RegisterUserDTO user) {
+        this.name = user.getName();
+        this.surname = user.getSurname();
+        this.username = user.getUsername();
+        this.password = user.getPassword();
+        this.position = user.getPosition();
+    }
 
     public Long getId() {
         return id;
