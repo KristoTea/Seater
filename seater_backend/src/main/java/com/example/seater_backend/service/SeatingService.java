@@ -9,5 +9,6 @@ import java.util.Optional;
 public interface SeatingService {
 
     List<Room> getRooms(Long floorId);
+    List<Floor> getFloors();
 
 }

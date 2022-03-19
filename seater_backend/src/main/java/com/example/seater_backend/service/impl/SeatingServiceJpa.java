@@ -9,21 +9,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class SeatingServiceJpa implements SeatingService {
 
     @Autowired
-    private FloorRepository seatingRepo;
+    private FloorRepository floorRepo;
+
 
 
     @Override
     public List<Room> getRooms(Long floorId) {
-        Floor floor = seatingRepo.findById(floorId).orElseThrow(
+        Floor floor = floorRepo.findById(floorId).orElseThrow(
                 () -> new RequestDeniedException("No floor with id " + floorId)
         );
         return floor.getRooms();
+    }
+
+    public List<Floor> getFloors() {
+        return floorRepo.findAll();
     }
 }
 

@@ -1,5 +1,6 @@
 package com.example.seater_backend.rest.user;
 
+import com.example.seater_backend.domain.Floor;
 import com.example.seater_backend.domain.Room;
 import com.example.seater_backend.domain.User;
 import com.example.seater_backend.rest.user.dto.RegisterUserDTO;
@@ -23,6 +24,9 @@ public class SeatingController {
         return seatingService.getRooms(floorId);
     }
 
-
+    @GetMapping("/floors")
+    public List<Floor> getFloors() {
+        return seatingService.getFloors();
+    }
 
 }
