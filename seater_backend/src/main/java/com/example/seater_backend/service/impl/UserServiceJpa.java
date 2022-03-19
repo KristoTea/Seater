@@ -6,6 +6,7 @@ import com.example.seater_backend.rest.user.dto.LoginUserDTO;
 import com.example.seater_backend.rest.user.dto.RegisterUserDTO;
 import com.example.seater_backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -23,10 +24,9 @@ public class UserServiceJpa implements UserService {
 
     @Override
     public User findByUsername(String username) {
-     //   return userRepo.findByUsername(username).orElseThrow(
-      //          () -> new UsernameNotFoundException("No user with username: "+username)
-     //   );
-        return null;
+       return userRepo.findByUsername(username).orElseThrow(
+               () -> new UsernameNotFoundException("No user with username: "+username)
+       );
     }
 
     @Override
