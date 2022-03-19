@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5eb046d-3550-4d74-b605-24619c6efd76" name="Changes" comment="majko moja">
-      <change afterPath="$PROJECT_DIR$/src/components/FloorRoom.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Building.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Building.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BuildingFloor.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BuildingFloor.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/FloorPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/FloorPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/HomePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chair.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chair.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FloorRoom.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FloorRoom.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Workstation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Workstation.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/PageWrap.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PageWrap.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/RoomPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RoomPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +75,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.start" />
       </list>

@@ -1,6 +1,9 @@
 import React from 'react'
 
+import {useHistory} from "react-router-dom";
+
 export default function FloorRoom({name, status}) {
+    const history = useHistory()
     return (
         <div style={{
             width: "250px",
@@ -12,7 +15,9 @@ export default function FloorRoom({name, status}) {
             display: "flex",
             justifyContent: "center"
         }}>
-                <div style={{
+                <div
+                    onClick={() => history.push("/room")}
+                    style={{
                     fontSize: 20,
                     fontWeight: 500,
                     display: "flex",
