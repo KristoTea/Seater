@@ -13,6 +13,6 @@ public interface SeatingService {
     boolean assignRoomToUser(Long roomId, Long userId);
     boolean assignRoomToTeam(Long roomId, Long teamId);
     boolean assignWorkstationToUser(Long workstationId, Long userId);
-    Room changeRoomStatus(Long roomId);
+    boolean changeRoomStatus(Long roomId);
 
 }
