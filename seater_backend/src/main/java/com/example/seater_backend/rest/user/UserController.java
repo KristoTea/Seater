@@ -10,15 +10,13 @@ import com.example.seater_backend.rest.user.dto.RegisterUserDTO;
 import com.example.seater_backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.util.List;
@@ -40,6 +38,7 @@ public class UserController {
     @Autowired
     UserSession userSession;
 
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PostMapping("/auth/register")
     public User registerUser(@RequestBody RegisterUserDTO user) {
         if (userService.checkUsernameUnique(user)) {
@@ -75,6 +74,19 @@ public class UserController {
             throw new IllegalArgumentException("Invalid username/password.");
         }
     }
+
+    @GetMapping("")
+    public List<User> listUsers() {
+        return userService.listAll();
+    }
+
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @DeleteMapping("/{userId}")
+    public void deleteUser(@PathVariable Long userId) {
+        userService.deleteUser(userId);
+    }
+
+
 
 
 }

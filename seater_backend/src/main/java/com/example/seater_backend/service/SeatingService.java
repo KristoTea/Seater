@@ -14,5 +14,6 @@ public interface SeatingService {
     boolean assignRoomToTeam(Long roomId, Long teamId);
     boolean assignWorkstationToUser(Long workstationId, Long userId);
     boolean changeRoomStatus(Long roomId);
+    Room getRoomDetails(Long roomId);
 
 }
