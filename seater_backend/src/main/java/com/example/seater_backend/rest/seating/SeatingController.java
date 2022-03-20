@@ -24,6 +24,11 @@ public class SeatingController {
         return seatingService.getRooms(floorId);
     }
 
+    @GetMapping("/rooms/detail/{roomId}")
+    public Room getRoomDetails(@PathVariable Long roomId) {
+        return seatingService.getRoomDetails(roomId);
+    }
+
     @GetMapping("/floors")
     public List<Floor> getFloors() {
         return seatingService.getFloors();
