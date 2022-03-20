@@ -111,7 +111,7 @@ export default function FloorPage() {
               }}
             >
               {rooms.map((r) => (
-                <FloorRoom id={r.id} available={r.isAssigned} name={r.name} />
+                <FloorRoom id={r.id} available={r.assigned} name={r.name} />
               ))}
             </div>
             <Accordion
