@@ -4,7 +4,13 @@
     <list default="true" id="c5eb046d-3550-4d74-b605-24619c6efd76" name="Changes" comment="WIP">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FloorRoom.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FloorRoom.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Workstation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Workstation.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WorkstationChip.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WorkstationChip.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/AdminPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/LoginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LoginPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/PageWrap.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PageWrap.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/RoomPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RoomPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
