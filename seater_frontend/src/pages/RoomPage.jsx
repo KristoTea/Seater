@@ -7,6 +7,7 @@ import PageWrap from "./PageWrap";
 import Workstation from "../components/Workstation";
 import UserList from "../components/UserList";
 import authHeader from "../util/auth";
+import { CircularProgress } from "@mui/material";
 
 const users = [
   {
@@ -103,7 +104,7 @@ export default function RoomPage() {
         >
           <div
             style={{
-              minWidth: "50%",
+              minWidth: "70%",
               maxHeight: "60%",
               overflow: "auto",
               padding: "20px",
@@ -113,6 +114,7 @@ export default function RoomPage() {
               justifyContent: "space-evenly",
             }}
           >
+            {!room && <CircularProgress />}
             {room &&
               room.workstations &&
               room.workstations.map(
@@ -121,7 +123,7 @@ export default function RoomPage() {
                     <Workstation equipment={workstation.equipment} />
                   )
               )}
-            {room && room.workstations && <p>No workstations.</p>}
+            {room && room.workstations.length === 0 && <p>No workstations.</p>}
           </div>
           <div
             style={{
