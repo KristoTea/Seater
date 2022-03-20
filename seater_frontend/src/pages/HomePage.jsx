@@ -9,15 +9,16 @@ import CardContent from "@mui/material/CardContent";
 import authHeader from "../util/auth";
 
 function HomePage() {
-  // React.useEffect(() => {
-  //     fetch("http://localhost:8080/seating/floors", {
-  //         method: "GET",
-  //         headers: {
-  //             Authorization: authHeader(),
-  //             "Content-Type": "application/json",
-  //         },
-  //     }).then((r) => console.log(r.json()))
-  // }, [])
+    const [floors, setFloors] = React.useState([]);
+   React.useEffect(() => {
+       fetch("http://localhost:8080/seating/floors", {
+           method: "GET",
+           headers: {
+               Authorization: authHeader(),
+               "Content-Type": "application/json",
+           },
+       }).then((r) => r.json().then((data) => setFloors(data)));
+   }, []);
   return (
     <PageWrap>
       <div
@@ -30,7 +31,7 @@ function HomePage() {
           padding: "10vh",
         }}
       >
-        <Building floors={[1, 2, 3, 4, 5, 6, 7]} />
+        <Building floors={floors} />
         <Slide direction="left" in>
           <div
             style={{
