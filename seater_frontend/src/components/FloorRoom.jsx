@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import Badge from "@mui/material/Badge";
 import authHeader from "../util/auth";
 
-export default function FloorRoom({ id, name, available }) {
+export default function FloorRoom({ id, available, name }) {
   const history = useHistory();
   const [hovered, setHovered] = React.useState(false);
 
