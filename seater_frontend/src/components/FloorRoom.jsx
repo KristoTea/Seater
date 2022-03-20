@@ -3,12 +3,11 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 
 import Badge from "@mui/material/Badge";
+import authHeader from "../util/auth";
 
-export default function FloorRoom({ name, available }) {
+export default function FloorRoom({ id, name, available }) {
   const history = useHistory();
   const [hovered, setHovered] = React.useState(false);
-
-  const id = 1;
 
   function getColour() {
     if (available && !hovered) return "rgb(152,56,56)";
@@ -16,6 +15,7 @@ export default function FloorRoom({ name, available }) {
     if (available && hovered) return "rgb(157,90,90)";
     if (!available && hovered) return "rgb(80,164,101)";
   }
+
   return (
     <div
       style={{

@@ -1,9 +1,10 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-export default function BuildingFloor({ i, length }) {
+export default function BuildingFloor({ id, name, length }) {
   const [hovered, setHovered] = React.useState(false);
   const history = useHistory();
+  console.log(name);
   return (
     <div
       onMouseEnter={() => {
@@ -21,7 +22,14 @@ export default function BuildingFloor({ i, length }) {
         background: hovered ? "#627c79" : "#414141",
         cursor: hovered && "pointer",
       }}
-      onClick={() => history.push("/floor")}
+      onClick={() =>
+        history.push({
+          pathname: "/floor",
+          state: {
+            floorId: id,
+          },
+        })
+      }
     >
       <p
         style={{
@@ -30,7 +38,7 @@ export default function BuildingFloor({ i, length }) {
           color: "white",
         }}
       >
-        {i}
+        {name}
       </p>
     </div>
   );

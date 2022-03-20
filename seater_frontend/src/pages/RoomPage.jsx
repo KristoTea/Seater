@@ -6,6 +6,7 @@ import { useLocation } from "react-router-dom";
 import PageWrap from "./PageWrap";
 import Workstation from "../components/Workstation";
 import UserList from "../components/UserList";
+import authHeader from "../util/auth";
 
 const users = [
   {
@@ -51,9 +52,23 @@ const users = [
 ];
 
 export default function RoomPage() {
-  // const id = useLocation().state.roomId;
-  //
-  // React.useEffect(() => {}, []);
+  const [room, setRoom] = React.useState();
+  const id = useLocation().state.roomId;
+
+  React.useEffect(() => {
+    fetch(`http://localhost:8080/seating/rooms/detail/${id}`, {
+      method: "GET",
+      headers: {
+        Authorization: authHeader(),
+        "Content-Type": "application/json",
+      },
+    }).then((r) =>
+      r.json().then((data) => {
+        setRoom(data);
+        console.log(data);
+      })
+    );
+  }, []);
 
   return (
     <PageWrap>
@@ -77,7 +92,7 @@ export default function RoomPage() {
             marginBottom: "1rem",
           }}
         >
-          A101
+          {room && room.name}
         </div>
         <div
           style={{
@@ -97,16 +112,24 @@ export default function RoomPage() {
               justifyContent: "space-evenly",
             }}
           >
-            <Workstation equipment={"Monitor, Keyboard, Mouse"} />
-            <Workstation equipment={"Monitor, Mouse"} />
-            <Workstation
-              equipment={"Monitor, Keyboard, Mouse, Laptop, Laptop"}
-            />
-            <Workstation equipment={"Keyboard, Mouse"} />
-            <Workstation equipment={"Monitor, Keyboard, Mouse"} />
-            <Workstation equipment={"Monitor, Keyboard, Mouse"} />
-            <Workstation equipment={"Monitor, Keyboard, Mouse"} />
-            <Workstation equipment={"Monitor, Keyboard, Mouse"} />
+            {room &&
+              room.workstations &&
+              room.workstations.map(
+                (workstation) =>
+                  workstation.equipment && (
+                    <Workstation equipment={workstation.equipment} />
+                  )
+              )}
+            {/*<Workstation equipment={"Monitor, Keyboard, Mouse"} />*/}
+            {/*<Workstation equipment={"Monitor, Mouse"} />*/}
+            {/*<Workstation*/}
+            {/*  equipment={"Monitor, Keyboard, Mouse, Laptop, Laptop"}*/}
+            {/*/>*/}
+            {/*<Workstation equipment={"Keyboard, Mouse"} />*/}
+            {/*<Workstation equipment={"Monitor, Keyboard, Mouse"} />*/}
+            {/*<Workstation equipment={"Monitor, Keyboard, Mouse"} />*/}
+            {/*<Workstation equipment={"Monitor, Keyboard, Mouse"} />*/}
+            {/*<Workstation equipment={"Monitor, Keyboard, Mouse"} />*/}
           </div>
           <div
             style={{

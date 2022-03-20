@@ -1,14 +1,8 @@
 import React from "react";
 
-import Tooltip from "@mui/material/Tooltip";
-
 import BuildingFloor from "./BuildingFloor";
-import buildingImg from "../assets/building.png";
 
 export default function Building({ floors }) {
-  React.useEffect(() => {
-    console.log(floors);
-  });
   return (
     <>
       <div
@@ -99,14 +93,12 @@ export default function Building({ floors }) {
             style={{
               height: "100%",
               width: "100%",
-              // border: "1px solid black",
-              // background: "white",
               display: "flex",
               flexDirection: "column",
             }}
           >
-            {floors.map((i, name) => (
-              <BuildingFloor i={name} length={floors.length} />
+            {floors.map((i) => (
+              <BuildingFloor id={i.id} name={i.name} length={floors.length} />
             ))}
           </div>
         </div>

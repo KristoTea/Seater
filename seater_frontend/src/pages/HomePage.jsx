@@ -21,7 +21,6 @@ function HomePage() {
     }).then((r) =>
       r.json().then((data) => {
         setFloors(data);
-        console.log(data);
       })
     );
   }, []);

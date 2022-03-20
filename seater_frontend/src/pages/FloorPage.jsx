@@ -1,21 +1,28 @@
 import React from "react";
 
+import { useLocation } from "react-router-dom";
+
 import PageWrap from "./PageWrap";
 import FloorRoom from "../components/FloorRoom";
 import authHeader from "../util/auth";
 
 export default function FloorPage() {
+  const floorId = useLocation().state.floorId;
 
-    const [rooms, setRooms] = React.useState([]);
-    React.useEffect(() => {
-        fetch("http://localhost:8080/seating/rooms/1", {
-            method: "GET",
-            headers: {
-                Authorization: authHeader(),
-                "Content-Type": "application/json",
-            },
-        }).then((r) => r.json().then((data) => setRooms(data)));
-    }, []);
+  const [rooms, setRooms] = React.useState([]);
+  React.useEffect(() => {
+    fetch(`http://localhost:8080/seating/rooms/${floorId}`, {
+      method: "GET",
+      headers: {
+        Authorization: authHeader(),
+        "Content-Type": "application/json",
+      },
+    }).then((r) =>
+      r.json().then((data) => {
+        setRooms(data);
+      })
+    );
+  }, []);
 
   const n = rooms.length;
   const x = n / 3;
@@ -90,7 +97,7 @@ export default function FloorPage() {
           }}
         >
           {rooms.map((r) => (
-            <FloorRoom available={r.isAssigned} name={r.roomAdministrator} />
+            <FloorRoom id={r.id} available={r.isAssigned} name={r.name} />
           ))}
         </div>
       </div>

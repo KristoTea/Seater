@@ -8,7 +8,6 @@ import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
 function PageWrap({ children, show }) {
   const history = useHistory();
   const user = localStorage.getItem("user");
-  console.log(user);
   return (
     <div
       style={{

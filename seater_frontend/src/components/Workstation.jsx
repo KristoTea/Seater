@@ -44,9 +44,7 @@ export default function Workstation({ equipment, assignee }) {
       >
         assignee
       </div>
-      {e.map((eq) => (
-        <WorkstationChip type={eq} />
-      ))}
+      {e !== "" && e.map((eq) => <WorkstationChip type={eq} />)}
       {isAdmin && (
         <Button
           style={{
