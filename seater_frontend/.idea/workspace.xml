@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5eb046d-3550-4d74-b605-24619c6efd76" name="Changes" comment="try get users">
+    <list default="true" id="c5eb046d-3550-4d74-b605-24619c6efd76" name="Changes" comment="WIP">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/AdminPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +52,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Korisnik\IdeaProjects\Hackathon2022\seater_frontend\node_modules\prettier" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
@@ -93,7 +94,7 @@
       <updated>1647689350117</updated>
       <workItem from="1647689351388" duration="7487000" />
       <workItem from="1647696915236" duration="7162000" />
-      <workItem from="1647735629053" duration="565000" />
+      <workItem from="1647735629053" duration="3110000" />
     </task>
     <task id="LOCAL-00001" summary="add building on homepage">
       <created>1647696722316</created>
@@ -144,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647734880148</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="WIP">
+      <created>1647736436242</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1647736436242</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,9 +176,9 @@
     <MESSAGE value="aaaaaaaaaaaaaaaaa" />
     <MESSAGE value="majko moja" />
     <MESSAGE value="add rooms page" />
-    <MESSAGE value="WIP" />
     <MESSAGE value="try get users" />
-    <option name="LAST_COMMIT_MESSAGE" value="try get users" />
+    <MESSAGE value="WIP" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

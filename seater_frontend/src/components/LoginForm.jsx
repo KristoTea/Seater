@@ -1,11 +1,12 @@
 import React from "react";
 
-import {Button} from "@mui/material";
+import { Button } from "@mui/material";
 
 export default function Login() {
-    return(
-    <div style={{display: "flex", 
-    flexDirection: "column", alignItems: "center"}}>
+  return (
+    <div
+      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+    >
       <h1>Dude, Log In!</h1>
       <form>
         <label>
@@ -20,6 +21,6 @@ export default function Login() {
           <Button>Submit</Button>
         </div>
       </form>
-      </div>
-    )
-  }
+    </div>
+  );
+}
