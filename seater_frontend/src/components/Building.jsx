@@ -105,8 +105,8 @@ export default function Building({ floors }) {
               flexDirection: "column",
             }}
           >
-            {floors.map((i) => (
-              <BuildingFloor i={i} length={floors.length} />
+            {floors.map((i, name) => (
+              <BuildingFloor i={name} length={floors.length} />
             ))}
           </div>
         </div>

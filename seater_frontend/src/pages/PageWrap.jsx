@@ -3,17 +3,12 @@ import { useHistory } from "react-router-dom";
 
 import logo from "../assets/logo.png";
 
-import {
-  AppBar,
-  Box,
-  Button,
-  IconButton,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
 
 function PageWrap({ children, show }) {
   const history = useHistory();
+  const user = localStorage.getItem("user");
+  console.log(user);
   return (
     <div
       style={{
@@ -34,22 +29,35 @@ function PageWrap({ children, show }) {
             <img src={logo} alt="logo" height={40} width={40} />
             <Typography
               variant="h4"
+              onClick={() => history.push("/")}
               style={{
                 fontWeight: 800,
                 fontFamily: "Poppins",
                 marginLeft: "1rem",
+                cursor: "pointer",
               }}
               component="div"
               sx={{ flexGrow: 1 }}
             >
               Seater
             </Typography>
-            {show == false ||
-              (show == undefined && (
-                <Button color="inherit" onClick={() => history.push("/login")}>
-                  Log in
-                </Button>
-              ))}
+            {show === false ||
+              (show === undefined &&
+                (user === null ? (
+                  <Button
+                    color="inherit"
+                    onClick={() => {history.push("/login");}}
+                  >
+                    Log in
+                  </Button>
+                ) : (
+                  <Button
+                    color="inherit"
+                    onClick={() => {localStorage.removeItem("user"); history.push("/login"); window.location.reload();}}
+                  >
+                    Log out
+                  </Button>
+                )))}
           </Toolbar>
         </AppBar>
       </Box>
