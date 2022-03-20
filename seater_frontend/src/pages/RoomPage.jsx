@@ -98,11 +98,12 @@ export default function RoomPage() {
           style={{
             display: "flex",
             justifyContent: "center",
+            minWidth: 1000,
           }}
         >
           <div
             style={{
-              width: "50%",
+              minWidth: "50%",
               maxHeight: "60%",
               overflow: "auto",
               padding: "20px",
@@ -120,10 +121,11 @@ export default function RoomPage() {
                     <Workstation equipment={workstation.equipment} />
                   )
               )}
+            {room && room.workstations && <p>No workstations.</p>}
           </div>
           <div
             style={{
-              width: "20%",
+              minWidth: "20%",
               maxHeight: "60%",
               padding: "20px",
               overflow: "auto",
