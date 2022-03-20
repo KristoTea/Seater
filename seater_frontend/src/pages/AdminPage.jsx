@@ -137,8 +137,22 @@ export default function AdminPage() {
             onChange={(e) => setPassword(e.target.value)}
           />
           <div>
-            <Button onClick={() => addUser()}>ADD</Button>
-            <Button onClick={() => setOpen(false)}>Cancel</Button>
+            <Button
+              onClick={() => {
+                window.location.reload();
+                addUser();
+              }}
+            >
+              ADD
+            </Button>
+            <Button
+              onClick={() => {
+                window.location.reload();
+                setOpen(false);
+              }}
+            >
+              Cancel
+            </Button>
           </div>
         </DialogContent>
       </Dialog>

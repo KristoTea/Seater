@@ -9,7 +9,7 @@ export default function Building({ floors }) {
         style={{
           height: "85%",
           width: "30%",
-          marginBottom: "10vh",
+          marginBottom: "20vh",
         }}
       >
         <div

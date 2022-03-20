@@ -34,6 +34,7 @@ function HomePage() {
       <div
         style={{
           display: "flex",
+          flexDirection: "column",
           flexGrow: 1,
           height: "100%",
           justifyContent: "center",
@@ -43,38 +44,49 @@ function HomePage() {
       >
         {floors.length > 0 ? (
           <>
+            <div
+              style={{
+                fontSize: 30,
+                fontWeight: 500,
+                display: "flex",
+                color: "white",
+                justifyContent: "center",
+              }}
+            >
+              Choose your desired floor and look for available seatings!
+            </div>
             <Building floors={floors} />
-            <Slide direction="left" in>
-              <Paper
-                style={{
-                  height: "100%",
-                  width: "20%",
-                  marginLeft: "2rem",
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: 30,
-                    fontWeight: 500,
-                    display: "flex",
-                    color: "white",
-                    justifyContent: "center",
-                  }}
-                >
-                  Information
-                  <div
-                    style={{
-                      marginRight: 10,
-                      fontWeight: 500,
-                      color: "black",
-                      fontSize: 15,
-                      display: "flex",
-                      flexDirection: "row",
-                    }}
-                  ></div>
-                </div>
-              </Paper>
-            </Slide>
+            {/*<Slide direction="left" in>*/}
+            {/*  <Paper*/}
+            {/*    style={{*/}
+            {/*      height: "100%",*/}
+            {/*      width: "20%",*/}
+            {/*      marginLeft: "2rem",*/}
+            {/*    }}*/}
+            {/*  >*/}
+            {/*    <div*/}
+            {/*      style={{*/}
+            {/*        fontSize: 30,*/}
+            {/*        fontWeight: 500,*/}
+            {/*        display: "flex",*/}
+            {/*        color: "white",*/}
+            {/*        justifyContent: "center",*/}
+            {/*      }}*/}
+            {/*    >*/}
+            {/*      Information*/}
+            {/*      <div*/}
+            {/*        style={{*/}
+            {/*          marginRight: 10,*/}
+            {/*          fontWeight: 500,*/}
+            {/*          color: "black",*/}
+            {/*          fontSize: 15,*/}
+            {/*          display: "flex",*/}
+            {/*          flexDirection: "row",*/}
+            {/*        }}*/}
+            {/*      ></div>*/}
+            {/*    </div>*/}
+            {/*  </Paper>*/}
+            {/*</Slide>*/}
           </>
         ) : (
           <div
