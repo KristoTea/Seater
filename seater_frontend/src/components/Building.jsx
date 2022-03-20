@@ -3,9 +3,6 @@ import React from "react";
 import BuildingFloor from "./BuildingFloor";
 
 export default function Building({ floors }) {
-  React.useEffect(() => {
-    floors = floors.reverse();
-  }, []);
   return (
     <>
       <div
