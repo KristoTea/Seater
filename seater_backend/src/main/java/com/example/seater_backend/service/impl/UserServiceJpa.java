@@ -1,6 +1,8 @@
 package com.example.seater_backend.service.impl;
 
+import com.example.seater_backend.dao.RoomRepository;
 import com.example.seater_backend.dao.UserRepository;
+import com.example.seater_backend.domain.Room;
 import com.example.seater_backend.domain.User;
 import com.example.seater_backend.rest.user.dto.LoginUserDTO;
 import com.example.seater_backend.rest.user.dto.RegisterUserDTO;
@@ -19,6 +21,9 @@ public class UserServiceJpa implements UserService {
 
     @Autowired
     private UserRepository userRepo;
+
+    @Autowired
+    private RoomRepository roomRepo;
 
     @Autowired
     private PasswordEncoder pwdEncoder;
@@ -63,7 +68,10 @@ public class UserServiceJpa implements UserService {
     public void deleteUser(Long userId) {
         User user = userRepo.findById(userId).orElseThrow(
                 () -> new UsernameNotFoundException("No user with id: "+userId));
-       userRepo.delete(user);
+        Room room = roomRepo.findRoomByRoomAdmin(user);
+        room.setRoomAdministrator(null);
+        roomRepo.save(room);
+        userRepo.delete(user);
     }
 
 }
