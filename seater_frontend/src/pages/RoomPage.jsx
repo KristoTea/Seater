@@ -12,6 +12,50 @@ import FaceIcon from '@mui/icons-material/Face';
 
 import PageWrap from "./PageWrap";
 import Workstation from "../components/Workstation"
+import UserList from "../components/UserList"
+
+const users = [
+    {
+        name: "Lucija Aleksić",
+        position: "CEO"
+    },
+    {
+        name: "Marta Dulibić",
+        position: "dosadna"
+    },
+    {
+        name: "Fica",
+        position: "Pokraj CEO"
+    },
+    {
+        name: "Kristo",
+        position: "AAAAAAAAAAAAAAAA"
+    },
+    {
+        name: "jelena",
+        position: "nezna die"
+    },
+    {
+        name: "Lucija Aleksić",
+        position: "CEO"
+    },
+    {
+        name: "Marta Dulibić",
+        position: "dosadna"
+    },
+    {
+        name: "Fica",
+        position: "Pokraj CEO"
+    },
+    {
+        name: "Kristo",
+        position: "AAAAAAAAAAAAAAAA"
+    },
+    {
+        name: "jelena",
+        position: "nezna die"
+    },
+]
 
 export default function RoomPage() {
     return (
@@ -19,7 +63,7 @@ export default function RoomPage() {
             <div style={{
                 display: "flex",
                 flexDirection: "column",
-                height: "100%",
+                height: "70%",
                 alignItems: "center",
                 flexGrow: 1,
             }}>
@@ -38,7 +82,7 @@ export default function RoomPage() {
                 }}>
                     <div style={{
                         width: "50%",
-                        maxHeight: "70%",
+                        maxHeight: "60%",
                         overflow: "auto",
                         padding: "20px",
                         background: "#414141",
@@ -57,44 +101,12 @@ export default function RoomPage() {
                     </div>
                     <div style={{
                         width: "20%",
-                        maxHeight: "70%",
+                        maxHeight: "60%",
+                        padding: "20px",
+                        overflow: "auto",
                         background: "#414141",
                     }}>
-                        <List sx={{ width: '100%' }}>
-                            <ListItem>
-                                <ListItemAvatar>
-                                    <Avatar>
-                                        <FaceIcon />
-                                    </Avatar>
-                                </ListItemAvatar>
-                                <ListItemText primary="Lucija Aleksić" secondary="Šef" />
-                            </ListItem>
-                            <ListItem>
-                                <ListItemAvatar>
-                                    <Avatar>
-                                        <FaceIcon />
-                                    </Avatar>
-                                </ListItemAvatar>
-                                <ListItemText primary="Marta Dulibić" secondary="AAAAAAA" />
-                            </ListItem>
-                            <ListItem>
-                                <ListItemAvatar>
-                                    <Avatar>
-                                        <FaceIcon />
-                                    </Avatar>
-                                </ListItemAvatar>
-                                <ListItemText primary="Lucija Aleksić" secondary="Šef" />
-                            </ListItem>
-                            <ListItem>
-                                <ListItemAvatar>
-                                    <Avatar>
-                                        <FaceIcon />
-                                    </Avatar>
-                                </ListItemAvatar>
-                                <ListItemText primary="Lucija Aleksić" secondary="Šef" />
-                            </ListItem>
-
-                        </List>
+                        <UserList users={users}/>
                     </div>
                 </div>
             </div>
