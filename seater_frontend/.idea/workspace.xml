@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5eb046d-3550-4d74-b605-24619c6efd76" name="Changes" comment="WIP">
+    <list default="true" id="97e66ab1-089b-43ce-a029-285f7b3cfac7" name="Changes" comment="fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/FloorPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/FloorPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FloorRoom.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FloorRoom.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Workstation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Workstation.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WorkstationChip.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WorkstationChip.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/LoginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LoginPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/PageWrap.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PageWrap.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/RoomPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RoomPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,6 +173,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add building on homepage" />

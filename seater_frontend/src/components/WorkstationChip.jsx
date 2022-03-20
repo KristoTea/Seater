@@ -13,13 +13,33 @@ export default function WorkstationChip({ type }) {
       type // Monitor, Laptop, Mouse, Keyboard
     ) {
       case "Mouse":
-        return <Chip icon={<MouseIcon />} label="Mouse" />;
+        return (
+          <Chip style={{ margin: "5px" }} icon={<MouseIcon />} label="Mouse" />
+        );
       case "Laptop":
-        return <Chip icon={<LaptopIcon />} label="Laptop" />;
+        return (
+          <Chip
+            style={{ margin: "5px" }}
+            icon={<LaptopIcon />}
+            label="Laptop"
+          />
+        );
       case "Monitor":
-        return <Chip icon={<MonitorIcon />} label="Monitor" />;
+        return (
+          <Chip
+            style={{ margin: "5px" }}
+            icon={<MonitorIcon />}
+            label="Monitor"
+          />
+        );
       case "Keyboard":
-        return <Chip icon={<KeyboardIcon />} label="Keyboard" />;
+        return (
+          <Chip
+            style={{ margin: "5px" }}
+            icon={<KeyboardIcon />}
+            label="Keyboard"
+          />
+        );
     }
   }
   return switchType();

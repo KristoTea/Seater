@@ -7,6 +7,9 @@ import Badge from "@mui/material/Badge";
 export default function FloorRoom({ name, available }) {
   const history = useHistory();
   const [hovered, setHovered] = React.useState(false);
+
+  const id = 1;
+
   function getColour() {
     if (available && !hovered) return "rgb(152,56,56)";
     if (!available && !hovered) return "rgb(44,161,73)";
@@ -31,7 +34,14 @@ export default function FloorRoom({ name, available }) {
         onMouseLeave={() => {
           setHovered(false);
         }}
-        onClick={() => history.push("/room")}
+        onClick={() =>
+          history.push({
+            pathname: "/room",
+            state: {
+              roomId: id,
+            },
+          })
+        }
         style={{
           fontSize: 20,
           fontWeight: 500,

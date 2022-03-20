@@ -22,8 +22,7 @@ export default function AdminPage() {
 
   React.useEffect(() => {
     fetchUsers();
-    // users = users.filter(user => user.username != "admin")
-    // setUsers(users)
+    setUsers(users.filter((user) => user.username != "admin"));
   }, []);
 
   function fetchUsers() {
