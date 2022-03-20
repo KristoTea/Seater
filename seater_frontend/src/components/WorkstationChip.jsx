@@ -40,6 +40,8 @@ export default function WorkstationChip({ type }) {
             label="Keyboard"
           />
         );
+      default:
+        return <></>;
     }
   }
   return switchType();

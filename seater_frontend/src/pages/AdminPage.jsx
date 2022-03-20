@@ -74,11 +74,24 @@ export default function AdminPage() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            flexDirection: "column",
           }}
         >
           <div
             style={{
-              width: "20%",
+              fontSize: 30,
+              fontWeight: 500,
+              display: "flex",
+              color: "white",
+              justifyContent: "center",
+            }}
+          >
+            Admin
+          </div>
+          <div
+            style={{
+              width: "60%",
+              marginTop: "2rem",
               maxHeight: "60%",
               padding: "20px",
               overflow: "auto",
@@ -124,8 +137,22 @@ export default function AdminPage() {
             onChange={(e) => setPassword(e.target.value)}
           />
           <div>
-            <Button onClick={() => addUser()}>ADD</Button>
-            <Button onClick={() => setOpen(false)}>Cancel</Button>
+            <Button
+              onClick={() => {
+                window.location.reload();
+                addUser();
+              }}
+            >
+              ADD
+            </Button>
+            <Button
+              onClick={() => {
+                window.location.reload();
+                setOpen(false);
+              }}
+            >
+              Cancel
+            </Button>
           </div>
         </DialogContent>
       </Dialog>

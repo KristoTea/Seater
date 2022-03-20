@@ -3,13 +3,16 @@ import React from "react";
 import BuildingFloor from "./BuildingFloor";
 
 export default function Building({ floors }) {
+  React.useEffect(() => {
+    floors = floors.reverse();
+  }, []);
   return (
     <>
       <div
         style={{
           height: "85%",
           width: "30%",
-          marginBottom: "10vh",
+          marginBottom: "20vh",
         }}
       >
         <div

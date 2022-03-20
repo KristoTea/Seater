@@ -21,8 +21,7 @@ export default function LoginPage() {
       username: username,
       password: password,
     };
-    console.log(username);
-    console.log(password);
+    console.log(user);
 
     fetch(api + "users/auth/login", {
       method: "POST",
@@ -40,11 +39,13 @@ export default function LoginPage() {
         }
       })
       .then((data) => {
-        localStorage.setItem("user", JSON.stringify(data));
+        localStorage.setItem("user", JSON.stringify(user));
+        if (username === "admin") {
+          history.push("/admin");
+          window.location.reload();
+        }
+        history.push("/");
       });
-
-    if (username == "admin") history.push("/admin");
-    history.push("/");
   }
 
   return (
@@ -82,6 +83,7 @@ export default function LoginPage() {
           />
           <TextField
             label="Password"
+            type="password"
             variant="filled"
             fullWidth
             style={{ width: "70%", marginBottom: 10 }}

@@ -7,6 +7,7 @@ import PageWrap from "./PageWrap";
 import Workstation from "../components/Workstation";
 import UserList from "../components/UserList";
 import authHeader from "../util/auth";
+import { CircularProgress } from "@mui/material";
 
 const users = [
   {
@@ -98,11 +99,12 @@ export default function RoomPage() {
           style={{
             display: "flex",
             justifyContent: "center",
+            minWidth: 1000,
           }}
         >
           <div
             style={{
-              width: "50%",
+              minWidth: "70%",
               maxHeight: "60%",
               overflow: "auto",
               padding: "20px",
@@ -112,28 +114,20 @@ export default function RoomPage() {
               justifyContent: "space-evenly",
             }}
           >
-            {/*{room &&*/}
-            {/*  room.workstations &&*/}
-            {/*  room.workstations.map(*/}
-            {/*    (workstation) =>*/}
-            {/*      workstation.equipment && (*/}
-            {/*        <Workstation equipment={workstation.equipment} />*/}
-            {/*      )*/}
-            {/*  )}*/}
-            <Workstation equipment={"Monitor, Keyboard, Mouse"} />
-            <Workstation equipment={"Monitor, Mouse"} />
-            <Workstation
-              equipment={"Monitor, Keyboard, Mouse, Laptop, Laptop"}
-            />
-            <Workstation equipment={"Keyboard, Mouse"} />
-            <Workstation equipment={"Monitor, Keyboard, Mouse"} />
-            <Workstation equipment={"Monitor, Keyboard, Mouse"} />
-            <Workstation equipment={"Monitor, Keyboard, Mouse"} />
-            <Workstation equipment={"Monitor, Keyboard, Mouse"} />
+            {!room && <CircularProgress />}
+            {room &&
+              room.workstations &&
+              room.workstations.map(
+                (workstation) =>
+                  workstation.equipment && (
+                    <Workstation equipment={workstation.equipment} />
+                  )
+              )}
+            {room && room.workstations.length === 0 && <p>No workstations.</p>}
           </div>
           <div
             style={{
-              width: "20%",
+              minWidth: "20%",
               maxHeight: "60%",
               padding: "20px",
               overflow: "auto",
