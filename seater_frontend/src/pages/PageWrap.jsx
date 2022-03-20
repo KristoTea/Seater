@@ -46,14 +46,14 @@ function PageWrap({ children, show }) {
                 (user === null ? (
                   <Button
                     color="inherit"
-                    onClick={() => history.push("/login")}
+                    onClick={() => {history.push("/login");}}
                   >
                     Log in
                   </Button>
                 ) : (
                   <Button
                     color="inherit"
-                    onClick={() => localStorage.setItem("user", null)}
+                    onClick={() => {localStorage.removeItem("user"); history.push("/login"); window.location.reload();}}
                   >
                     Log out
                   </Button>
