@@ -21,7 +21,6 @@ public class Room {
     @OneToOne
     private User roomAdministrator;
 
-    @JsonBackReference
     @OneToMany(cascade = CascadeType.ALL)
     private List<Workstation> workstations;
 
