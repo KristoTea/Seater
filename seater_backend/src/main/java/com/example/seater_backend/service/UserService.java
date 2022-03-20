@@ -14,6 +14,6 @@ public interface UserService {
     User registerUser(RegisterUserDTO user);
     boolean checkUsernameExists(LoginUserDTO user);
     boolean checkPassword(LoginUserDTO user);
-    boolean deleteUser(Long userId);
+    void deleteUser(Long userId);
 
 }

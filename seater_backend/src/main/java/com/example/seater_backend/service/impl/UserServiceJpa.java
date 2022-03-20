@@ -60,10 +60,10 @@ public class UserServiceJpa implements UserService {
     }
 
     @Override
-    @Modifying
-    @Query(("DELETE FROM seater_user WHERE user.id = :userId "))
-    public boolean deleteUser(Long userId) {
-        return true;
+    public void deleteUser(Long userId) {
+        User user = userRepo.findById(userId).orElseThrow(
+                () -> new UsernameNotFoundException("No user with id: "+userId));
+       userRepo.delete(user);
     }
 
 }

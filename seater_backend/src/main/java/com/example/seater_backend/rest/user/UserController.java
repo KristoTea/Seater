@@ -78,6 +78,11 @@ public class UserController {
         return userService.listAll();
     }
 
+    @DeleteMapping("/{userId}")
+    public void deleteUser(@PathVariable Long userId) {
+        userService.deleteUser(userId);
+    }
+
 
 
 
