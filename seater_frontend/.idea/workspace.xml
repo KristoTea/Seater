@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97e66ab1-089b-43ce-a029-285f7b3cfac7" name="Changes" comment="almost fix (room crash)">
+    <list default="true" id="97e66ab1-089b-43ce-a029-285f7b3cfac7" name="Changes" comment="fix colors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoginForm.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/FloorPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/FloorPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/HomePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/LoginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LoginPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Workstation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Workstation.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WorkstationChip.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WorkstationChip.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AdminPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AdminPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/RoomPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RoomPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -177,7 +175,21 @@
       <option name="project" value="LOCAL" />
       <updated>1647748064042</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="idk">
+      <created>1647751776767</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1647751776767</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fix colors">
+      <created>1647752414899</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1647752414899</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,7 +218,9 @@
     <MESSAGE value="nmp" />
     <MESSAGE value="fix building view" />
     <MESSAGE value="almost fix (room crash)" />
-    <option name="LAST_COMMIT_MESSAGE" value="almost fix (room crash)" />
+    <MESSAGE value="idk" />
+    <MESSAGE value="fix colors" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix colors" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

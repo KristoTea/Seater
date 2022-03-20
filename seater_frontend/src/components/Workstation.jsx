@@ -2,16 +2,16 @@ import React from "react";
 
 import WorkstationChip from "../components/WorkstationChip";
 import { Button } from "@mui/material";
-import {useHistory} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 export default function Workstation({ equipment, assignee }) {
-
   const e = equipment[0].split(", ");
-    const history = useHistory();
-    if(localStorage.getItem("user") == null) {
-        history.push("/login");
-    }
-  const isAdmin = localStorage.getItem("user").username === "admin";
+  const history = useHistory();
+  //   if(localStorage.getItem("user") == null) {
+  //       history.push("/login");
+  //   }
+  // const isAdmin = localStorage.getItem("user").username === "admin";
+  const isAdmin = false;
   return (
     <div
       style={{

@@ -74,11 +74,24 @@ export default function AdminPage() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            flexDirection: "column",
           }}
         >
           <div
             style={{
-              width: "20%",
+              fontSize: 30,
+              fontWeight: 500,
+              display: "flex",
+              color: "white",
+              justifyContent: "center",
+            }}
+          >
+            Admin
+          </div>
+          <div
+            style={{
+              width: "60%",
+              marginTop: "2rem",
               maxHeight: "60%",
               padding: "20px",
               overflow: "auto",
