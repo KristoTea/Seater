@@ -5,7 +5,6 @@ import { Button } from "@mui/material";
 import TextField from "@mui/material/TextField";
 
 import PageWrap from "./PageWrap";
-import LoginForm from "../components/LoginForm";
 
 import authHeader from "../util/auth";
 
@@ -53,29 +52,44 @@ export default function LoginPage() {
       <div
         style={{
           display: "flex",
+          flexGrow: 1,
           flexDirection: "column",
+          justifyContent: "space-evenly",
+          height: "60%",
+          margin: "auto",
+          marginTop: "2rem",
           alignItems: "center",
+          background: "#0A534B",
+          borderRadius: 5,
+          width: "30%",
         }}
       >
-        <h1>Dude, Log In!</h1>
+        <h1 style={{ color: "white" }}>Log In</h1>
         <div
           style={{
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            width: "100%",
           }}
         >
           <TextField
             label="Username"
-            variant="outlined"
+            variant="filled"
+            fullWidth
+            style={{ width: "70%", marginBottom: 10 }}
             onChange={(e) => setUsername(e.target.value)}
           />
           <TextField
             label="Password"
-            variant="outlined"
+            variant="filled"
+            fullWidth
+            style={{ width: "70%", marginBottom: 10 }}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <Button onClick={() => submit()}>Submit</Button>
+          <Button variant="outlined" onClick={() => submit()}>
+            Log in
+          </Button>
         </div>
       </div>
     </PageWrap>

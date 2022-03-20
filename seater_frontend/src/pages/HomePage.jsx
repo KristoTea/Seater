@@ -7,11 +7,15 @@ import Building from "../components/Building";
 import CardContent from "@mui/material/CardContent";
 
 import authHeader from "../util/auth";
-import { CircularProgress } from "@mui/material";
+import { CircularProgress, Paper } from "@mui/material";
+import { useHistory } from "react-router-dom";
 
 function HomePage() {
   const [floors, setFloors] = React.useState([]);
+  const history = useHistory();
   React.useEffect(() => {
+    // console.log(localStorage.getItem("user") == null);
+    // if (localStorage.getItem("user") == null) history.push("/login");
     fetch("http://localhost:8080/seating/floors", {
       method: "GET",
       headers: {
@@ -21,6 +25,7 @@ function HomePage() {
     }).then((r) =>
       r.json().then((data) => {
         setFloors(data);
+        console.log(data);
       })
     );
   }, []);
@@ -40,12 +45,10 @@ function HomePage() {
           <>
             <Building floors={floors} />
             <Slide direction="left" in>
-              <div
+              <Paper
                 style={{
-                  height: "50%",
+                  height: "100%",
                   width: "20%",
-                  borderRadius: 10,
-                  background: "#627c79",
                   marginLeft: "2rem",
                 }}
               >
@@ -70,11 +73,21 @@ function HomePage() {
                     }}
                   ></div>
                 </div>
-              </div>
+              </Paper>
             </Slide>
           </>
         ) : (
-          <CircularProgress />
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <CircularProgress size={100} />{" "}
+          </div>
         )}
       </div>
     </PageWrap>

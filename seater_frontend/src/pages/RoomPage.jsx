@@ -112,24 +112,24 @@ export default function RoomPage() {
               justifyContent: "space-evenly",
             }}
           >
-            {room &&
-              room.workstations &&
-              room.workstations.map(
-                (workstation) =>
-                  workstation.equipment && (
-                    <Workstation equipment={workstation.equipment} />
-                  )
-              )}
-            {/*<Workstation equipment={"Monitor, Keyboard, Mouse"} />*/}
-            {/*<Workstation equipment={"Monitor, Mouse"} />*/}
-            {/*<Workstation*/}
-            {/*  equipment={"Monitor, Keyboard, Mouse, Laptop, Laptop"}*/}
-            {/*/>*/}
-            {/*<Workstation equipment={"Keyboard, Mouse"} />*/}
-            {/*<Workstation equipment={"Monitor, Keyboard, Mouse"} />*/}
-            {/*<Workstation equipment={"Monitor, Keyboard, Mouse"} />*/}
-            {/*<Workstation equipment={"Monitor, Keyboard, Mouse"} />*/}
-            {/*<Workstation equipment={"Monitor, Keyboard, Mouse"} />*/}
+            {/*{room &&*/}
+            {/*  room.workstations &&*/}
+            {/*  room.workstations.map(*/}
+            {/*    (workstation) =>*/}
+            {/*      workstation.equipment && (*/}
+            {/*        <Workstation equipment={workstation.equipment} />*/}
+            {/*      )*/}
+            {/*  )}*/}
+            <Workstation equipment={"Monitor, Keyboard, Mouse"} />
+            <Workstation equipment={"Monitor, Mouse"} />
+            <Workstation
+              equipment={"Monitor, Keyboard, Mouse, Laptop, Laptop"}
+            />
+            <Workstation equipment={"Keyboard, Mouse"} />
+            <Workstation equipment={"Monitor, Keyboard, Mouse"} />
+            <Workstation equipment={"Monitor, Keyboard, Mouse"} />
+            <Workstation equipment={"Monitor, Keyboard, Mouse"} />
+            <Workstation equipment={"Monitor, Keyboard, Mouse"} />
           </div>
           <div
             style={{
