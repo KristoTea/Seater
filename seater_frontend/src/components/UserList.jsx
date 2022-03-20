@@ -7,8 +7,9 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 
 import FaceIcon from '@mui/icons-material/Face';
+import ClearIcon from '@mui/icons-material/Clear';
 
-export default function UserList({users}) {
+export default function UserList({users, deleteUsers, deleteUser}) {
     return (
         <List sx={{ width: '100%' }}>
             {users.map(user => (
@@ -19,6 +20,7 @@ export default function UserList({users}) {
                         </Avatar>
                     </ListItemAvatar>
                     <ListItemText primary={user.name} secondary={user.position} />
+                    {deleteUsers && <ClearIcon style={{cursor: "pointer"}} onClick={() => deleteUser(user.id)}/>}
                 </ListItem>
             ))}
         </List>
