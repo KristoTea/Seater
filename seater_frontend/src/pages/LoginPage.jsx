@@ -1,25 +1,99 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
+
+import { Button } from "@mui/material";
+import TextField from "@mui/material/TextField";
 
 import PageWrap from "./PageWrap";
-import LoginForm from "../components/LoginForm";
 
-import authHeader from "../util/auth"
+import authHeader from "../util/auth";
+
+const api = "http://localhost:8080/";
 
 export default function LoginPage() {
-    React.useEffect(() => {
-        fetch("http://localhost:8080/users/auth/login", {
-            method: "POST",
-            headers: {
-                Authorization: authHeader(),
-                "Content-Type": "application/json",
-            },
-        }).then((r) => console.log(r.json()))
-    }, [])
+  const [username, setUsername] = React.useState();
+  const [password, setPassword] = React.useState();
 
-    return (
+  const history = useHistory();
+
+  function submit() {
+    const user = {
+      username: username,
+      password: password,
+    };
+    console.log(user);
+
+    fetch(api + "users/auth/login", {
+      method: "POST",
+      body: JSON.stringify(user),
+      headers: {
+        Authorization: authHeader(),
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("HTTP status code: " + response.status);
+        } else {
+          return response.json();
+        }
+      })
+      .then((data) => {
+        localStorage.setItem("user", JSON.stringify(user));
+        if (username === "admin") {
+          history.push("/admin");
+          window.location.reload();
+        }
+        history.push("/");
+      });
+  }
+
+  return (
     <PageWrap show={false}>
-      <LoginForm></LoginForm>
-    </PageWrap>       
-
-    )
+      <div
+        style={{
+          display: "flex",
+          flexGrow: 1,
+          flexDirection: "column",
+          justifyContent: "space-evenly",
+          height: "60%",
+          margin: "auto",
+          marginTop: "2rem",
+          alignItems: "center",
+          background: "#0A534B",
+          borderRadius: 5,
+          width: "30%",
+        }}
+      >
+        <h1 style={{ color: "white" }}>Log In</h1>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            width: "100%",
+          }}
+        >
+          <TextField
+            label="Username"
+            variant="filled"
+            fullWidth
+            style={{ width: "70%", marginBottom: 10 }}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <TextField
+            label="Password"
+            type="password"
+            variant="filled"
+            fullWidth
+            style={{ width: "70%", marginBottom: 10 }}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <Button variant="outlined" onClick={() => submit()}>
+            Log in
+          </Button>
+        </div>
+      </div>
+    </PageWrap>
+  );
 }

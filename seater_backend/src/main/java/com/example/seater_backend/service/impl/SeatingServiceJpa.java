@@ -114,5 +114,12 @@ public class SeatingServiceJpa implements SeatingService {
 
        return true;
     }
+
+    @Override
+    public Room getRoomDetails(Long roomId) {
+        return roomRepo.findById(roomId).orElseThrow(
+                () -> new UsernameNotFoundException("No room with that id" )
+        );
+    }
 }
 

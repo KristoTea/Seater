@@ -1,5 +1,6 @@
 package com.example.seater_backend.service;
 
+import com.example.seater_backend.domain.Room;
 import com.example.seater_backend.domain.User;
 import com.example.seater_backend.rest.user.dto.LoginUserDTO;
 import com.example.seater_backend.rest.user.dto.RegisterUserDTO;
@@ -14,6 +15,6 @@ public interface UserService {
     User registerUser(RegisterUserDTO user);
     boolean checkUsernameExists(LoginUserDTO user);
     boolean checkPassword(LoginUserDTO user);
-    boolean deleteUser(Long userId);
+    void deleteUser(Long userId);
 
 }
