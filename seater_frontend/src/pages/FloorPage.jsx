@@ -2,59 +2,21 @@ import React from "react";
 
 import PageWrap from "./PageWrap";
 import FloorRoom from "../components/FloorRoom";
-
-const rooms = [
-  {
-    isAssigned: false,
-    roomAdministrator: "CEO's office",
-  },
-  {
-    isAssigned: true,
-    roomAdministrator: "A1 team",
-  },
-  {
-    isAssigned: true,
-    roomAdministrator: "Lucija Aleksic",
-  },
-  {
-    isAssigned: false,
-    roomAdministrator: "B3",
-  },
-  {
-    isAssigned: true,
-    roomAdministrator: "D723",
-  },
-  {
-    isAssigned: false,
-    roomAdministrator: "Mama",
-  },
-  {
-    isAssigned: false,
-    roomAdministrator: "CEO's office",
-  },
-  {
-    isAssigned: true,
-    roomAdministrator: "A1 team",
-  },
-  {
-    isAssigned: true,
-    roomAdministrator: "Lucija Aleksic",
-  },
-  {
-    isAssigned: false,
-    roomAdministrator: "B3",
-  },
-  {
-    isAssigned: true,
-    roomAdministrator: "D723",
-  },
-  {
-    isAssigned: false,
-    roomAdministrator: "Mama",
-  },
-];
+import authHeader from "../util/auth";
 
 export default function FloorPage() {
+
+    const [rooms, setRooms] = React.useState([]);
+    React.useEffect(() => {
+        fetch("http://localhost:8080/seating/rooms/1", {
+            method: "GET",
+            headers: {
+                Authorization: authHeader(),
+                "Content-Type": "application/json",
+            },
+        }).then((r) => r.json().then((data) => setRooms(data)));
+    }, []);
+
   const n = rooms.length;
   const x = n / 3;
   let rows = "";
